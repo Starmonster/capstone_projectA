@@ -160,6 +160,11 @@ As we can see at present there is room for improvement across the board.
 
 <img src="figures/project_file_structure.png" width="400" height="600">
 
+##### Note on files and folders:
+-The project presentation is saved in the figures folder and named 'Restaurant Recommendation System.pdf'
+-The modelling notebook is located in the models folder not the notebooks folder
+-The raw data files are not located within the current repo structure due to storage issues to be resolved at phase 2. They are currently hosted on Google drive and a link will be made available. 
+
 ********************************************************************************************************************************
 
 
@@ -181,9 +186,6 @@ Two recommenders are currently deployed with the 'Rec Sys Modelling' jupyter not
 - Surprise prediction algorithm documentation: https://surprise.readthedocs.io/en/stable/prediction_algorithms_package.html
 
 - Presentation: https://docs.google.com/presentation/d/12IsMq6GingPK_GkJOSs8U99t3g5H_SRXGz75lVzg5wo/edit#slide=id.p
-
-
-
 
 
 
