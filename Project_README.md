@@ -32,7 +32,7 @@ The objective of this project is to create a restaurant recommendation system th
 
 ------------CRISP-DM---------- 
 
-<img src='CRISPDM.png' width='300' height='300'>
+<img src='figures/CRISPDM.png' width='300' height='300'>
 
 ### 2,a. Business Understanding
 A new lifestyle startup, Butterly.com,  is seeking to offer restaurant suggestions via their web and mobile applications. They have a growing user base of food lovers and socialites keen to find the latest and greatest places to eat out in cities around the world. They would like a recommendation system to suggest appropriate establishments to its existing users based on their exitsing data and also to engage with new users by recommending restaurants based on minimal feedback or.
@@ -96,7 +96,7 @@ a) using linear kernel from sklearn pairwaise libraries we measure the similarit
 
 The best results from our various models are as follows: 
 
-<img src='figures/model_results.png' width='600' height='150>
+<img src='figures/model_results.png' width='600' height='200'>
 
 Model type.              Best Train RMSE       Best Test RMSE         Comments / optimum hyperparameters
 KNNBasic                 0.7657                0.9987                 user-user, cosine
