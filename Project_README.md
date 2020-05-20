@@ -1,7 +1,7 @@
 # capstone_projectA - JMOULDS
-Restaurant Recommendation System
+# Restaurant Recommendation System
 
-Readme Contents:
+## Readme Contents:
 1. Introduction
 
 2. Data Science Process
@@ -21,24 +21,26 @@ Readme Contents:
 6. Links
 *******************************************************************************************************************************
 
-1. Introduction
+## 1. Introduction
     
 The objective of this project is to create a restaurant recommendation system that will propose restaurants to tourists or a local population using a variety of machine learning techniques and data analysis skills. The project will utilise data from a variety of sources and all work is written and executed in jupyter notebook. This ReadMe explains the status of the project at Minimum Viable Product stage which will be referenced as 'phase 1' throughout this document. Given the success of 'phase 1' it is anticipated tha 'phase 2' will commence with a focus on improvement, refinement and user friendly deployment. 
 
 *******************************************************************************************************************************
 
 
-2. Data Science Process
+## 2. Data Science Process
 
 ------------CRISP-DM---------- 
 
-2,a. Business Understanding
+<img src='CRISPDM.png' width='300' height='300'>
+
+### 2,a. Business Understanding
 A new lifestyle startup, Butterly.com,  is seeking to offer restaurant suggestions via their web and mobile applications. They have a growing user base of food lovers and socialites keen to find the latest and greatest places to eat out in cities around the world. They would like a recommendation system to suggest appropriate establishments to its existing users based on their exitsing data and also to engage with new users by recommending restaurants based on minimal feedback or.
 
 The startup has its roots in Scotland so initially they would like to use Edinburgh as a test case before investing in a more global product. 
 
 
-2,b. Data Understanding
+### 2,b. Data Understanding
 The base data sets used in phase 1 have been sourced from Yelp (via Kaggle.com) and are split into business dataset and a review dataset. The business data set includes information about the businesses including name, location, average rating, number of reviews, and category keywords. The review data set includes every review text and rating listed by user id and business id. 
 
 The raw imported data sets are global in nature and are spread across more than 5 million reviews of businesses world wide. For our project we have filtered out for restaurants based in Edinburgh. This leaves us with the following numbers:
@@ -53,11 +55,11 @@ We have explicit data in the form of review ratings with marks our of 5 and deta
 
 We can also note that as with most product distributions of this kind we have a popular minority that are very well reviewed and a majority that stretch out across ever reducing numbers of reviews. It will be relatively easy to recommend the popular establishments but it is our aim over both phases to locate the hidden gems within the long tail of lesser known eateries. 
 
-------insert long tail-----
+
+<img src="figures/popularity_by_cat.png" width="700" height="350">
 
 
-
-2,c. Data Preparation
+### 2,c. Data Preparation
 For phase 1 we have produced 4 '.csv' files to be used variously across our exploratory data analysis and modelling stages. They are as follows: 
 
 - new_collaborative_limit.csv:- This csv file was prepared to be used with our collaborative models. It lists out each and every user instance so we can manipulate the similarities between users. 
@@ -73,7 +75,7 @@ Other data sources were considered and trialed but remain unused at phase 1.
 
 
 
-2,d. Modelling
+### 2,d. Modelling
 We have a number of modelling and filtering approaches: 
 
 - Memory based collaborative filtering using surprise libraries and k-nearest neighbor algorithms KNNWithMeans, KNNBasic, KNNBaseline. We measure similarities using cosine, pearson and msd similarity metrics.  See links section for further reading on the surprise libraries. Our model accuracy was measured using the root mean square error of the model fit. 
@@ -94,6 +96,8 @@ a) using linear kernel from sklearn pairwaise libraries we measure the similarit
 
 The best results from our various models are as follows: 
 
+<img src='figures/model_results.png' width='600' height='150>
+
 Model type.              Best Train RMSE       Best Test RMSE         Comments / optimum hyperparameters
 KNNBasic                 0.7657                0.9987                 user-user, cosine
 KNNBaseline              0.7254                0.9500                 user-user, cosine
@@ -107,7 +111,7 @@ The content similarity comparisons were run but they do not currently return an 
 
 
 
-2,e. Evaluation
+### 2,e. Evaluation
 
 Cold Start / New Users
 Because of the sparsness of the current matrices we know that new users are not particularly tailored for. The collaborative recommender essentially acts as a cold start recommender for any user with less than 10 reviews. The recommender merely returns a listed of the best rated and most reviewed resturants. 
@@ -119,22 +123,23 @@ Our recommendations predictions are out on average by 0.7 of a rating. The follo
 
 Table to show model predictions against actual user ratings
 
+<img src="figures/Collaborative_Predictions.png" width="400" height="300">
 
 
 
-2,f. Deployment
+### 2,f. Deployment
 
 Two recommenders are currently deployed with the 'Rec Sys Modelling' jupyter notebook. 
-1) Collaborative recommender asks a new user to rate a set number various restaurants and returns the most appropriate alternatives. 
+a) Collaborative recommender asks a new user to rate a set number various restaurants and returns the most appropriate alternatives. 
 
-2) Content recommender is currently run through a function. Call the recommender with an argument equal to the name of restaurant form the data set. An appropriate set of n alternative restaurants is returned. 
+b) Content recommender is currently run through a function. Call the recommender with an argument equal to the name of restaurant form the data set. An appropriate set of n alternative restaurants is returned. 
 
-3) Hybrid recommender is mid build at phase 1 but it would be a product of the recs 1 and 2 when complete. 
+A Hybrid recommender is mid build at phase 1 but it would be a product of the recs 1 and 2 when complete. 
 
 ********************************************************************************************************************************
 
 
-3. Next Steps and Future Improvements
+## 3. Next Steps and Future Improvements
 
 As we can see at present there is room for improvement across the board. 
 
@@ -151,15 +156,15 @@ As we can see at present there is room for improvement across the board.
 ********************************************************************************************************************************
 
 
-4. Repository Navigation
+## 4. Repository Navigation
 
-
+<img src="figures/project_file_structure.png" width="400" height="600">
 
 ********************************************************************************************************************************
 
 
 
-5. Instructions
+## 5. Instructions
 
 Two recommenders are currently deployed with the 'Rec Sys Modelling' jupyter notebook. 
 1) Collaborative recommender asks a new user to rate a set number various restaurants and returns the most appropriate alternatives. 
@@ -171,7 +176,7 @@ Two recommenders are currently deployed with the 'Rec Sys Modelling' jupyter not
 ********************************************************************************************************************************
 
 
-6. Links
+## 6. Links
 
 - Surprise prediction algorithm documentation: https://surprise.readthedocs.io/en/stable/prediction_algorithms_package.html
 
@@ -188,7 +193,7 @@ Two recommenders are currently deployed with the 'Rec Sys Modelling' jupyter not
 
 To add
 link to large files
-link to presentation
-CRISP-DM flow chart
 
-collaborative prediction table
+
+
+
